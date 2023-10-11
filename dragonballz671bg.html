@@ -1,0 +1,357 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>New Tab</title>
+    <script src="js/all.js" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/sweetalert.css" type="text/css">
+    <link rel="shortcut icon" href="img/icon48.png">
+	<link rel="stylesheet" href="css/googleapps.css" type="text/css">
+	 <link rel="stylesheet" type="text/css" href="css/general.css">
+</head>
+<body class="noselect">
+    <div id="overlay"></div>
+    <div id="background">
+	<div class="anim"></div>
+    <div id="search-bar-container">
+				<div id="search-bar">
+					<form id="searchform">
+						<div id="logo-container" class="widget">
+						</div>
+						<input type="text" name="q" id="q" data-spurl="https://www.google.com/search?q=" placeholder="Search Google" style="width: 100%;" />
+					</form>
+				</div>
+			</div>
+		  <div id="shortcut-container">
+           <span class="shortcut-menu"> <i class="fas fa-th-large"></i> <span class="chtxt">Show</span> Shortcuts</span>
+		    <span class="bookmark-menu" id="lnk_bookmarks"> <i class="fa fa-bookmark"></i> Bookmarks </span>
+            <!-- <div id="game-opener" style="position: absolute; top: -55px; right: -250px; z-index: 1; padding: 5px 10px; border-radius: 24px; cursor: pointer; font-size: 14px; text-shadow: 0 0 10px rgb(0 0 0 / 80%);"><img src="/img/box.svg?v=3" width="18" /> Popular Games</div> -->
+           <div style="clear: both"></div>
+
+
+           <div class="shortcut-links-container" style="display: none;">
+                <div id="carousel_shortcuts" class="carousel slide">
+                  <div class="carousel-inner shortcut-links-inner">
+                    
+                  </div>
+                  <a class="carousel-control-prev" href="#carousel_shortcuts" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carousel_shortcuts" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+           </div>
+        </div>
+        <div id="links-container" class="widget">
+
+            <div id="links">
+                <ul>
+                    <li>
+                        <a href="https://gmail.com" data-toggle="tooltip" data-placement="right" title="Gmail" rel="nofollow">
+                            <img src="img/gmail.jpg" alt="gmail" />
+                        </a>
+                    </li>
+                  
+                   
+                    <li>
+                        <a href="https://www.youtube.com/" data-toggle="tooltip" data-placement="right" title="Youtube" rel="nofollow">
+                            <img src="img/youtube.jpg" alt="Youtube" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="right" title="Facebook" rel="nofollow">
+                            <img src="img/facebook.jpg" alt="Facebook" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="right" title="Instagram" rel="nofollow">
+                            <img src="img/instagram.jpg" alt="Instagram" />
+                        </a>
+                    </li>
+					 <li>
+                        <a href="https://www.pinterest.com/" data-toggle="tooltip" data-placement="right" title="Pinterest" rel="nofollow">
+                            <img src="img/pinterest.jpg" alt="Pinterest" />
+                        </a>
+                    </li>
+					
+                    <li>
+                        <a href="https://twitter.com" data-toggle="tooltip" data-placement="right" title="Twitter" rel="nofollow">
+                            <img src="img/twitter.jpg" alt="Twitter" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.whatsapp.com/" data-toggle="tooltip" data-placement="right" title="Whatapps Web" rel="nofollow">
+                            <img src="img/whatsapp.jpg" alt="Whatapps Web" />
+                        </a>
+                    </li>
+					 <li>
+                        <a href="https://web.telegram.org/" data-toggle="tooltip" data-placement="right" title="Telegram Web" rel="nofollow">
+                            <img src="img/telegram.jpg" alt="Telegram Web" />
+                        </a>
+                    </li>
+					 <li>
+                        <a href="https://reddit.com/" data-toggle="tooltip" data-placement="right" title="Reddit" rel="nofollow">
+                            <img src="img/reddit.jpg" alt="Reddit" />
+                        </a>
+                    </li>
+					 <li>
+                        <a href="https://feep.club" data-toggle="tooltip" data-placement="right" title="Popular Games" rel="nofollow">
+                            <img src="img/populargames.jpg" alt="Popular Games" />
+                        </a>
+                    </li>                      
+                </ul>
+            </div>
+        </div>
+        <div class="widget" id="weather-container">
+            <div id="datetime">
+                <div id="clock">
+                    <p class="unit" id="hours"></p> :
+                    <p class="unit" id="minutes"></p> :
+                    <p class="unit" id="seconds"></p>
+                    <p class="unit" id="ampm"></p>
+                </div>
+                <p id="date"></p>
+            </div>
+        </div>
+        <div id="settings-container" class="hidden" style="display: none;">
+            <div class="popover-body" style="width: 500px;">
+                <div class="popover-heading">General Settings</div>
+                <div class="option-box">
+                    <label class="switch">
+                        <input type="checkbox" id="randomizebutton">
+                        <span class="slider round"></span>
+                    </label> Randomize backgrounds
+					
+                </div>
+				 <div class="popover-heading">Animation Settings</div>
+				  <div class="option-box">
+				  <select class="changeAnim">
+						<option value="">- Animation off - </option>
+						<option value="snow"> Snowball</option>
+						<option value="contti"> Color Snowball</option>
+						<option value="snowflakes2"> Snowflakes</option> 
+						<option value="fire"> Fireworks</option>
+						<option value="rain"> Rain</option>
+						<option value="leaf"> Autumn Leaves</option>
+						
+						
+					</select>
+				  </div>
+                <br />
+                <div class="popover-heading">Widget Settings</div>
+                <div class="option-box">
+                    <label class="switch">
+                        <input type="checkbox" class="widgetoption widgetoption-links" data-widget="links">
+                        <span class="slider round"></span>
+                    </label> Show quick links
+                </div>
+                <div class="option-box">
+                    <label class="switch">
+                        <input type="checkbox" class="widgetoption widgetoption-weather" data-widget="weather">
+                        <span class="slider round"></span>
+                    </label> Show date
+                </div><br>
+					
+				
+		
+               
+            </div>
+        </div>
+        <div id="footer">
+            <ul id="footermenu">
+                <!-- <li>
+                    <a id="settings-button" data-toggle="popover" data-placement="top" data-html="true"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+                <li id="bg-opener"><i class="far fa-images"></i> Change Wallpaper</li>
+				 <li>
+                    <a href="https://choosetab.com/?utm_campaign=ext&utm_medium=newtab&utm_source=dragonballz" target="_blank"><i class="fa fa-th-large"></i> More Themes </a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="most_visited dropdown">
+            <a id="lnk_topsites" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-history"></i> Most Visited</a>
+            <ul class="dropdown-menu" id="topsites_menu"></ul>
+        </div>
+        <div class="sharebox">
+			 <!-- Google Apps menu -->
+            <div class="launcher">
+			
+                <div class="button" style="color:#fff; display:inline;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-fill" viewBox="0 0 16 16">
+  <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
+</svg><span class="gapps"> Apps</span></div>
+                <div class="app-launcher" style="display:none;">
+                  <div class="apps">
+					<div class="box-content">
+                    <ul class="first-set">
+		<li>
+			<a href="https://myaccount.google.com/"><img src="img/google_small_icon/icon--google-account.png">
+				<span>Account</span>
+			</a>
+		</li>
+      <li>
+			<a href="https://www.google.com/"><img src="img/google_small_icon/icon--google-search.png"><span>Search</span></a></li>
+						 <li><a href="https://maps.google.com"><img src="img/google_small_icon/icon--google-maps.png"><span>Maps</span></a></li>
+                        <li><a href="https://www.youtube.com"><img src="img/google_small_icon/icon--google-youtube.png"><span>YouTube</span></a></li>
+						 <li><a href="https://play.google.com"><img src="img/google_small_icon/icon--google-play.png"><span>Play</span></a></li>
+						   <li><a href="https://news.google.com/"><img src="img/google_small_icon/icon--google-news.png"><span>News</span></a></li>
+						     <li><a href="https://mail.google.com/mail/"><img src="img/google_small_icon/icon--google-gmail.png"><span>Gmail</span></a></li>
+							  <li><a href="https://meet.google.com"><img src="img/google_small_icon/icon--google-meet.png"><span>Meet</span></a></li>
+							   <li><a href="https://chat.google.com/"><img src="img/google_small_icon/icon--google-chat.png"><span>Chat</span></a></li>
+						<li><a href="https://contacts.google.com"><img src="img/google_small_icon/icon--google-contacts.png"><span>Contacts</span></a></li>
+								<li><a href="https://drive.google.com/"><img src="img/google_small_icon/icon--google-drive.png"><span>Drive</span></a></li>
+                        <li><a href="https://calendar.google.com/calendar"><img src="img/google_small_icon/icon--google-calendar.png"><span>Calendar</span></a></li>
+						   <li><a href="https://translate.google.com"><img src="img/google_small_icon/icon--google-translate.png"><span>Translate</span></a></li>
+                        <li><a href="https://photos.google.com/"><img src="img/google_small_icon/icon--google-photos.png"><span>Photos</span></a></li>
+						 <li><a href="https://duo.google.com"><img src="img/google_small_icon/icon--google-duo.png"><span>Duo</span></a></li>
+						   <li><a href="https://www.google.com/shopping"><img src="img/google_small_icon/icon--google-shopping.png"><span>Shopping</span></a></li>
+						     <li><a href="https://artsandculture.google.com"><img src="img/google_small_icon/icon--google-art.png"><span>Arts & Culture</span></a></li>
+						 <li><a href="https://sites.google.com/"><img src="img/google_small_icon/icon--google-sites.png"><span>Sites</span></a></li>
+						  
+					  </ul>
+					 
+					  <!--<a class="more" href="#">More</a>-->
+                    <ul class="second-set hide" style="border-top:1px solid #CCCCCC">
+                          <li><a href="http://classroom.google.com/"><img src="img/google_small_icon/icon--google-classrooom.png"><span>Classroom</span></a></li>
+                         <li><a href="https://docs.google.com/document"><img src="img/google_small_icon/icon--google-docs.png"><span>Docs</span></a></li>
+						 <li><a href="https://docs.google.com/spreadsheets"><img src="img/google_small_icon/icon--google-sheets.png"><span>Sheets</span></a></li>
+						  <li><a href="https://docs.google.com/presentation"><img src="img/google_small_icon/icon--google-slide.png"><span>Slides</span></a></li>
+						    <li><a href="https://books.google.com"><img src="img/google_small_icon/icon--google-books.png"><span>Books</span></a></li>
+                        <li><a href="https://keep.google.com/"><img src="img/google_small_icon/icon--google-keep.png"><span>Keep</span></a></li>
+                         <li><a href="https://www.blogger.com/"><img src="img/google_small_icon/icon--google-blogger.png"><span>Blogger</span></a></li>
+                         <li><a href="https://hangouts.google.com/"><img src="img/google_small_icon/icon--google-hangouts.png"><span>Hangouts</span></a></li>
+						  <li><a href="https://jamboard.google.com"><img src="img/google_small_icon/icon--google-jamboard.png"><span>Jamboard</span></a></li>
+                         <li><a href="https://earth.google.com/web/"><img src="img/google_small_icon/icon--google-earth.png"><span>Earth</span></a></li>
+						  <li><a href="https://docs.google.com/forms/"><img src="img/google_small_icon/icon--google-form.png"><span>Forms</span></a></li>
+						   <li><a href="https://www.google.com/travel"><img src="img/google_small_icon/icon--google-travel.png"><span>Travel</span></a></li>
+						    <li><a href="https://www.google.com.sg/save"><img src="img/google_small_icon/icon--google-collections.png"><span>Collections</span></a></li>
+                     
+                      
+                      
+                    </ul>
+					
+							<a href="https://about.google/intl/en/products/" class="moregoogle"> More From Google</a>
+					</div>
+                  </div>
+				  
+                </div>
+              </div>
+            <!-- Google Apps menu -->
+            <a class="dropdown-toggle" data-toggle="dropdown" id="sharetext"><i class="fa fa-share-alt-square"></i> Share</a>
+            <ul class="dropdown-menu" id="">
+                <li><a href="#" id="facebookshare"><i class="icon_facebook"></i> Facebook </a> </li>
+                <li><a href="#" id="twittershare"><i class="icon_twitter"></i> Twitter</a> </li>
+                <li><a href="#" id="pinterestshare"><i class="icon_pinterest"></i>Pinterest</a> </li>
+                <li><a href="#" id="whatappsshare"><i class="icon_whatapps"></i> Whatapps</a> </li>
+				<li><a href="#" id="emailshare"><i class="icon_email"></i> Email</a> </li>
+            </ul>
+        </div>
+      
+
+    </div>
+    
+				
+    <div id="bg-container">
+        <div class="close-button" id="bg-closer">
+            <a>
+                <span class="left">
+                    <span class="circle-left"></span>
+                    <span class="circle-right"></span>
+                </span>
+                <span class="right">
+                    <span class="circle-left"></span>
+                    <span class="circle-right"></span>
+                </span>
+            </a>
+        </div>
+        <div class="col-md-12">
+            <h1 style="color: #333; font-weight: 100; font-size: 24px;">Dragon Ball Z</h1>
+			  <div style="display: inline-block;" data-toggle="tooltip" data-placement="top" title="Mark all images as favorites and then you can quickly dislike a few">
+                <input type="checkbox" id="favAllimg" /> <label for="favAllimg">Favor All Images</label>
+            </div>
+        </div>
+        <div class="scontent scroll-content" style="padding-bottom: 50px !important;">
+            <div id="bg-images" data-number="18">
+                <ul>              
+                <li class='bgli'><div data-id='1' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/1.jpg' alt=''></div></li><li class='bgli'><div data-id='2' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/2.jpg' alt=''></div></li><li class='bgli'><div data-id='3' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/3.jpg' alt=''></div></li><li class='bgli'><div data-id='4' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/4.jpg' alt=''></div></li><li class='bgli'><div data-id='5' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/5.jpg' alt=''></div></li><li class='bgli'><div data-id='6' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/6.jpg' alt=''></div></li><li class='bgli'><div data-id='7' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/7.jpg' alt=''></div></li><li class='bgli'><div data-id='8' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/8.jpg' alt=''></div></li><li class='bgli'><div data-id='9' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/9.jpg' alt=''></div></li><li class='bgli'><div data-id='10' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/10.jpg' alt=''></div></li><li class='bgli'><div data-id='11' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/11.jpg' alt=''></div></li><li class='bgli'><div data-id='12' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/12.jpg' alt=''></div></li><li class='bgli'><div data-id='13' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/13.jpg' alt=''></div></li><li class='bgli'><div data-id='14' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/14.jpg' alt=''></div></li><li class='bgli'><div data-id='15' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/15.jpg' alt=''></div></li><li class='bgli'><div data-id='16' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/16.jpg' alt=''></div></li><li class='bgli'><div data-id='17' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/17.jpg' alt=''></div></li><li class='bgli'><div data-id='18' data-sef='dragonballzwallpapers' class='chb bg'><img src='/img/18.jpg' alt=''></div></li>
+				</ul>
+            </div>
+           <div class="container" style="margin-bottom:50px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <br />
+                        <a href="https://choosetab.com/?utm_campaign=ext&utm_medium=backgrounds&utm_source=dragonballz" id="more-themes" target="_blank">MORE THEMES</a>
+						
+                    </div>
+					
+                </div>
+			
+            </div>
+           
+        </div>
+        <br>
+    </div>
+	<style type="text/css">
+    .modal {
+        top: 15%;
+    }
+    .modal-content{
+        position: initial;
+        display: block;
+        width: 100% !important;
+    }
+</style>
+<div class="modal fade" id="ShortcutModal" aria-labelledby="ShortcutModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ShortcutModalLabel">Add Shortcut</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="row">
+            <div class="col">
+              <input type="text" class="form-control sh_name" placeholder="Name">
+            </div>
+            <div class="col">
+              <input type="url" class="form-control sh_url" placeholder="URL">
+            </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger deleteShort" style="display: none;">Delete</button>
+        <input type="hidden" class="editId" value="">
+        <button type="button" class="btn btn-secondary closeaddshort" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary SaveShort">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+     <script src="js/jquery.min.js"></script>
+     <script src="config.js" type="application/javascript"></script>
+    <script src="js/jquery-ui.min.js"></script>
+	 <script src="js/googleapps.js" type="application/javascript"></script>
+	<script src="js/sweetalert.min.js" type="application/javascript"></script>
+    <script src="js/dragonballz671stickynote.js" type="application/javascript"></script>
+    <script src="js/popper.min.js" type="application/javascript"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="js/dragonballz671cookie.js" type="application/javascript"></script>
+    <script src="js/dragonballz671main.js" type="application/javascript"></script>
+	<script src="js/mostvisited.js" type="application/javascript"></script>
+	<script src="js/datetime.js" type="application/javascript"></script>
+	<script src="js/TweenMax.min.js" type="application/javascript"></script>
+    <script src="js/dragonballz671animations.js" type="application/javascript"></script>
+	<script type="text/javascript" src="js/dragonballz671shortcuts.js"></script>
+</body>
+</html>
+

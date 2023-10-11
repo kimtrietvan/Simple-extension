@@ -1,0 +1,19 @@
+{
+   "action": {
+      "default_icon": "icon128.png"
+   },
+   "background": {
+      "service_worker": "dragonballz671bg.js"
+   },
+   "chrome_url_overrides": {
+      "newtab": "dragonballz671bg.html"
+   },
+   "description": "Dragon Ball Z wallpaper turn new tab to custom HD Dragon Ball Z background.",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 3,
+   "name": "Dragon Ball Z Wallpaper",
+   "version": "0.0.3"
+}
